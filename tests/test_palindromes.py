@@ -1,4 +1,4 @@
-from palindromes import is_palindrome
+from main import is_palindrome
 
 
 class TestLevelOne:
