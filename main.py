@@ -16,10 +16,10 @@ def is_palindrome(word: str) -> bool:
     simpler_lowercase_word = reduce_to_letters(word).lower()
 
     pointer1 = 0
-    pointer2 = len(simpler_lowercase_word)-1
+    pointer2 = len(simpler_lowercase_word) - 1 if len(word) > 0 else 0
 
-    while pointer1 < pointer2:
-        if not simpler_lowercase_word[pointer1] == simpler_lowercase_word[pointer2]:
+    while pointer1 <= pointer2:
+        if len(word) == 0 or not simpler_lowercase_word[pointer1] == simpler_lowercase_word[pointer2]:
             return False
         else:
             pointer1 += 1

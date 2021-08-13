@@ -27,3 +27,6 @@ class TestLevelOne:
         assert is_palindrome('python') == False
         assert is_palindrome('mommy') == False
         assert is_palindrome('abracadabra') == False
+
+    def test_empty_string(self):
+        assert is_palindrome('') == False
