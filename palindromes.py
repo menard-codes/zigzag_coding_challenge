@@ -1,13 +1,28 @@
+from utils import reduce_to_letters
 
-def is_palindrome(string: str) -> bool:
+
+def is_palindrome(word: str) -> bool:
     """
-    Identifies if the input string is palindromic or not.
+    Identifies if the input word is palindromic or not.
 
         Parameter:
-            string (str): The string to be tested.
+            word (str): The word to be tested.
 
         Returns:
-            palindromic (bool): Tells if string input is a palindrome (True) or not (False).
+            palindromic (bool): Tells if word input is a
+                palindrome (True) or not (False).
     """
 
-    return
+    simpler_lowercase_word = reduce_to_letters(word).lower()
+
+    pointer1 = 0
+    pointer2 = len(simpler_lowercase_word)-1
+
+    while pointer1 < pointer2:
+        if not simpler_lowercase_word[pointer1] == simpler_lowercase_word[pointer2]:
+            return False
+        else:
+            pointer1 += 1
+            pointer2 -= 1
+
+    return True
