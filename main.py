@@ -4,6 +4,7 @@ from utils import reduce_to_letters
 def is_palindrome(word: str) -> bool:
     """
     Identifies if the input word is palindromic or not.
+    Disregards special characters, numbers, punctuations, etc.
 
         Parameter:
             word (str): The word to be tested.
