@@ -1,4 +1,4 @@
-from utils import reduce_to_letters
+from utils.palindrome_utils import reduce_to_letters
 
 
 def is_palindrome(word: str) -> bool:
